@@ -1,0 +1,21 @@
+const request = require("supertest");
+const app = require("../app");
+const { sequelize } = require('../models/index.js')
+const { queryInterface } = sequelize
+const {userRouteTest} = require("./1-user-route.test")
+const {categoryRouteTest} = require("./2-category-route.test")
+const {addressRouteTest} = require("./3-address-route.test")
+const {productRouteTest} = require("./4-product-route.test")
+const {productOptionRouteTest} = require("./5-product-option-route.test")
+const {orderRouteTest} = require("./6-order-route.test")
+const {orderItemRouteTest} = require("./7-order-item.route.test")
+const {shoppingCartRouteTest} = require("./8-shopping-cart-route.test")
+
+describe("User route", () => userRouteTest)
+describe("Category route", () => categoryRouteTest)
+describe("Address route", () => addressRouteTest)
+describe("Product route", () => productRouteTest)
+describe("Product option route", () => productOptionRouteTest)
+describe("Order route", () => orderRouteTest)
+describe("Order item route", () => orderItemRouteTest)
+describe("Shopping cart route", () => shoppingCartRouteTest)
